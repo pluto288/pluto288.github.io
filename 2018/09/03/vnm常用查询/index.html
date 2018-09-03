@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hive," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="喜欢一个人">
-<meta property="og:url" content="http://pluto288.github.io/index.html">
+<meta name="description" content="提取数据123456789101112131415drop table if exists  public_fkmx.idong_customers_err111;create table public_fkmx.idong_customers_err111 asselect * from(select  user_gid, create_time , param_name,param_value">
+<meta name="keywords" content="hive">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vnm常用查询">
+<meta property="og:url" content="http://pluto288.github.io/2018/09/03/vnm常用查询/index.html">
 <meta property="og:site_name" content="喜欢一个人">
+<meta property="og:description" content="提取数据123456789101112131415drop table if exists  public_fkmx.idong_customers_err111;create table public_fkmx.idong_customers_err111 asselect * from(select  user_gid, create_time , param_name,param_value">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-03T14:39:26.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="喜欢一个人">
+<meta name="twitter:title" content="vnm常用查询">
+<meta name="twitter:description" content="提取数据123456789101112131415drop table if exists  public_fkmx.idong_customers_err111;create table public_fkmx.idong_customers_err111 asselect * from(select  user_gid, create_time , param_name,param_value">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://pluto288.github.io/"/>
+  <link rel="canonical" href="http://pluto288.github.io/2018/09/03/vnm常用查询/"/>
 
 
 
 
 
-  <title>喜欢一个人</title>
+  <title>vnm常用查询 | 喜欢一个人</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/03/vnm常用查询/" itemprop="url">vnm常用查询</a></h1>
+          <h1 class="post-title" itemprop="name headline">vnm常用查询</h1>
         
 
         <div class="post-meta">
@@ -350,14 +352,10 @@
       
 
       
-        
-          
-            <h1 id="提取数据"><a href="#提取数据" class="headerlink" title="提取数据"></a>提取数据</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">exists</span>  public_fkmx.idong_customers_err111;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> public_fkmx.idong_customers_err111 <span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span></span><br><span class="line">(<span class="keyword">select</span> </span><br><span class="line"> user_gid,</span><br><span class="line"> create_time</span><br><span class="line"> , param_name,param_value,</span><br><span class="line"> row_number() <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> user_gid,param_name <span class="keyword">order</span> <span class="keyword">by</span> create_time <span class="keyword">desc</span>) <span class="keyword">as</span> rn</span><br><span class="line"> <span class="keyword">from</span> </span><br><span class="line">    (<span class="keyword">select</span> * <span class="keyword">from</span> fk.t_dw_fk_derived_fk_log</span><br><span class="line">     <span class="keyword">where</span> ds&gt;=<span class="string">'20180501'</span></span><br><span class="line">     <span class="keyword">and</span> biz_type=<span class="string">'idong'</span> </span><br><span class="line">     <span class="keyword">and</span> param_name <span class="keyword">in</span></span><br><span class="line">    (<span class="string">'fk_609_manual_check_result'</span>,<span class="string">'fk_560_vnmpersonal_auth_state'</span>,<span class="string">'fk_575_vnmcontact_auth_state'</span>,<span class="string">'fk_570_vnmiden_auth_state'</span>,<span class="string">'fk_607_need_manual_check'</span>))a)c</span><br><span class="line"><span class="keyword">where</span> rn=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+        <h1 id="提取数据"><a href="#提取数据" class="headerlink" title="提取数据"></a>提取数据</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">exists</span>  public_fkmx.idong_customers_err111;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> public_fkmx.idong_customers_err111 <span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span></span><br><span class="line">(<span class="keyword">select</span> </span><br><span class="line"> user_gid,</span><br><span class="line"> create_time</span><br><span class="line"> , param_name,param_value,</span><br><span class="line"> row_number() <span class="keyword">over</span>(<span class="keyword">partition</span> <span class="keyword">by</span> user_gid,param_name <span class="keyword">order</span> <span class="keyword">by</span> create_time <span class="keyword">desc</span>) <span class="keyword">as</span> rn</span><br><span class="line"> <span class="keyword">from</span> </span><br><span class="line">    (<span class="keyword">select</span> * <span class="keyword">from</span> fk.t_dw_fk_derived_fk_log</span><br><span class="line">     <span class="keyword">where</span> ds&gt;=<span class="string">'20180501'</span></span><br><span class="line">     <span class="keyword">and</span> biz_type=<span class="string">'idong'</span> </span><br><span class="line">     <span class="keyword">and</span> param_name <span class="keyword">in</span></span><br><span class="line">    (<span class="string">'fk_609_manual_check_result'</span>,<span class="string">'fk_560_vnmpersonal_auth_state'</span>,<span class="string">'fk_575_vnmcontact_auth_state'</span>,<span class="string">'fk_570_vnmiden_auth_state'</span>,<span class="string">'fk_607_need_manual_check'</span>))a)c</span><br><span class="line"><span class="keyword">where</span> rn=<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <h1 id="拼接变量"><a href="#拼接变量" class="headerlink" title="拼接变量"></a>拼接变量</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> <span class="keyword">if</span> <span class="keyword">exists</span>  public_fkmx.idong_customers_err1112;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> public_fkmx.idong_customers_err1112</span><br><span class="line"><span class="keyword">as</span> <span class="keyword">select</span> a0.user_gid,</span><br><span class="line">b0.param_value <span class="keyword">as</span> fk_560_vnmpersonal_auth_state,</span><br><span class="line">from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (c0.create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd'</span>) <span class="keyword">as</span> fk_570_vnmiden_auth_state_time,</span><br><span class="line">c0.param_value <span class="keyword">as</span> fk_575_vnmcontact_auth_state,</span><br><span class="line">d0.param_value <span class="keyword">as</span> fk_570_vnmiden_auth_state,</span><br><span class="line">from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (d0.create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd'</span>) <span class="keyword">as</span> iden_time,</span><br><span class="line">(<span class="keyword">hour</span>(from_unixtime(<span class="keyword">unix_timestamp</span>(),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>))-</span><br><span class="line"><span class="keyword">hour</span>(from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (d0.create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>))</span><br><span class="line">+(<span class="keyword">datediff</span>(from_unixtime(<span class="keyword">unix_timestamp</span>(),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>), </span><br><span class="line">from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (d0.create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>) </span><br><span class="line">))*<span class="number">24</span>) <span class="keyword">as</span> diff_hours,</span><br><span class="line">d0.create_time ,</span><br><span class="line">e0.param_value <span class="keyword">as</span> fk_609_manual_check_result,</span><br><span class="line">from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (d0.create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd'</span>) <span class="keyword">as</span> result_time,</span><br><span class="line">f0.param_value <span class="keyword">as</span> fk_607_need_manual_check,</span><br><span class="line">from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (f0.create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd'</span>) <span class="keyword">as</span> need_time,</span><br><span class="line">g0.user_gid_biz,</span><br><span class="line">g0.idcard_no</span><br><span class="line"><span class="keyword">from</span>  </span><br><span class="line">(<span class="keyword">select</span> <span class="keyword">distinct</span> user_gid <span class="keyword">from</span>  public_fkmx.idong_customers_err111  ) a0 </span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span></span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span>  public_fkmx.idong_customers_err111  <span class="keyword">where</span> param_name = <span class="string">'fk_560_vnmpersonal_auth_state'</span>  ) b0</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> public_fkmx.idong_customers_err111 <span class="keyword">where</span> param_name = <span class="string">'fk_575_vnmcontact_auth_state'</span> ) c0</span><br><span class="line"><span class="keyword">on</span> a0.user_gid = c0.user_gid</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> public_fkmx.idong_customers_err111 <span class="keyword">where</span> param_name = <span class="string">'fk_570_vnmiden_auth_state'</span> ) d0</span><br><span class="line"><span class="keyword">on</span> a0.user_gid = d0.user_gid</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> public_fkmx.idong_customers_err111 <span class="keyword">where</span> param_name = <span class="string">'fk_609_manual_check_result'</span> ) e0</span><br><span class="line"><span class="keyword">on</span> a0.user_gid = d0.user_gid</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> public_fkmx.idong_customers_err111 <span class="keyword">where</span> param_name = <span class="string">'fk_607_need_manual_check'</span> ) f0</span><br><span class="line"><span class="keyword">on</span> a0.user_gid = d0.user_gid</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> </span><br><span class="line">(<span class="keyword">select</span> <span class="keyword">distinct</span> bg_user_gid,user_gid_biz,idcard_no <span class="keyword">from</span>  fk.t_dw_fk_realname  <span class="keyword">where</span> biz_type = <span class="string">"idong"</span>) g0</span><br><span class="line"><span class="keyword">on</span> a0.user_gid = g0.bg_user_gid</span><br></pre></td></tr></table></figure>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span>  public_fkmx.idong_customers_err1112 <span class="keyword">where</span> fk_560_vnmpersonal_auth_state = <span class="number">2</span> <span class="keyword">and</span> fk_575_vnmcontact_auth_state = <span class="number">2</span> <span class="keyword">and</span> fk_570_vnmiden_auth_state = <span class="number">0</span> <span class="keyword">and</span> </span><br><span class="line">((iden_time &lt;= result_time <span class="keyword">and</span> need_time &lt;= result_time) <span class="keyword">or</span> diff_hours  &gt;<span class="number">48</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span>  </span><br><span class="line">(<span class="keyword">hour</span>(from_unixtime(<span class="keyword">unix_timestamp</span>(),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>))-</span><br><span class="line"><span class="keyword">hour</span>(from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>))</span><br><span class="line">+(<span class="keyword">datediff</span>(from_unixtime(<span class="keyword">unix_timestamp</span>(),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>), </span><br><span class="line">from_unixtime(<span class="keyword">CAST</span>(<span class="keyword">SUBSTRING</span> (create_time, <span class="number">1</span>, <span class="number">10</span>) <span class="keyword">AS</span> <span class="built_in">bigint</span>),<span class="string">'yyyy-MM-dd HH:mm:ss'</span>) </span><br><span class="line">))*<span class="number">24</span>)</span><br><span class="line"><span class="keyword">from</span> fk.t_dw_fk_derived_fk_log <span class="keyword">limit</span> <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -372,311 +370,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pluto288.github.io/2018/05/12/喜欢一个人/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="pluto288">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="喜欢一个人">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/12/喜欢一个人/" itemprop="url">大概很不错</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-12T23:30:28+08:00">
-                2018-05-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/吐槽/" itemprop="url" rel="index">
-                    <span itemprop="name">吐槽</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/hive/" rel="tag"># hive</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p><excerpt in="" index="" |="" 首页摘要=""> </excerpt></p>
-<ul>
-<li>从前个姑娘<blockquote>
-<p>纸短情长</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/12/喜欢一个人/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/12/喜欢一个人/" rel="next" title="大概很不错">
+                <i class="fa fa-chevron-left"></i> 大概很不错
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pluto288.github.io/2015/12/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="pluto288">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="喜欢一个人">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/12/03/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-03T00:00:00+08:00">
-                2015-12-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><excerpt in="" index="" |="" 首页摘要=""> </excerpt></p>
-<ul>
-<li>Welcome to Hexo! This is your very first post. this talking about how to use github
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/12/03/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -686,10 +409,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -697,6 +421,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -717,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -778,6 +515,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#提取数据"><span class="nav-number">1.</span> <span class="nav-text">提取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拼接变量"><span class="nav-number">2.</span> <span class="nav-text">拼接变量</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -925,6 +678,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
